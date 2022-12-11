@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Fitness Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript" >
+
+
+       eel.user_profile_info()
+       eel.user_profile_welcome()
+
+
+
+
+
+    </script>
+
+  </head>
+  <body>
+
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/mydashboard.html">Virtual<span>Fitness AI</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item cta-btn" >
+                    <a class="nav-link" onclick = bye() href="/member.html">Log Out</a>
+                </li>
+            </ul>
+            </div>
+
+            </div>
+        </nav>
+     </div>
+    </header>
+
+
+    <section class="section element-animate">
+      <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 text-center heading-wrap">
+              <h2>My Profile</h2>
+              <span class="back-text">My Profile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
+
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-wrap overlap primary element-animate">
+              <h2 class="h2">My Profile</h2>
+              <form action="#" method=" POST">
+                <p> First Name</p>
+                <div class="form-group">
+                  <input type="text" name= "fname" id= "fname" class="form-control" placeholder="First Name">
+                </div>
+                <p> Last Name </p>
+                <div class="form-group">
+                  <input type="text" name= "lname" id= "lname" class="form-control" placeholder="Last Name">
+                </div>
+                <p> Age </p>
+                <div class="form-group">
+                  <input type="number" name= "age" id= "age" class="form-control" placeholder="Age">
+                </div>
+                <p> Gender </p>
+                <div class="form-group">
+                  <input type="text" name= "gender" id= "gender" class="form-control" placeholder="Gender(M/F/O)">
+                </div>
+                <p> Height (cm) </p>
+                <div class="form-group">
+                  <input type="number" name= "height" id= "height" class="form-control" placeholder="Height in cm">
+                </div>
+                <p> Weight (lbs) </p>
+                <div class="form-group">
+                  <input type="number" name= "weight" id= "weight" class="form-control" placeholder="Weight (in lbs)">
+                </div>
+                <p> BMI </p>
+                <div class="form-group">
+                  <input type="number" name= "bmi" id= "bmi" class="form-control" placeholder="BMI">
+                </div>
+                <p> Email </p>
+                <div class="form-group">
+                  <input type="email" name= "email" id="email" class="form-control" placeholder="Email">
+                </div>
+                <p> Password </p>
+                <div class="form-group">
+                  <input type="password" name= "password" id= "password" class="form-control" placeholder="Password">
+                </div>
+                <p> Password Repeat </p>
+                <div class="form-group">
+                  <input type="password" name= "rpassword" id= "rpassword" class="form-control" placeholder="Repeat Password">
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" class="btn btn-warning btn-block py-3" value="Save" onclick="update_profile()">
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+
+
+    <script src="js/main.js"></script>
+
+
+    <script type="text/javascript" >
+
+
+        // Responses
+
+
+	        async function bye()  {
+
+
+	        eel.goodbye()
+
+	        };
+
+
+
+        	eel.expose(user_info)
+	        function user_info(u_first, u_last, u_age, u_gender, u_height, u_weight, u_bmi, u_email, u_password, u_rpassword)  {
+
+
+
+	          document.getElementById("fname").value = u_first;
+	          document.getElementById("lname").value = u_last;
+	          document.getElementById("age").value = u_age;
+	          document.getElementById("gender").value = u_gender;
+	          document.getElementById("height").value = u_height;
+	          document.getElementById("weight").value = u_weight;
+	          document.getElementById("bmi").value = u_bmi;
+	          document.getElementById("email").value = u_email;
+	          document.getElementById("password").value = u_password;
+	          document.getElementById("rpassword").value = u_rpassword;
+
+<!--              href here tests to see if this function is seen from the python side. -->
+<!--              location.href = "/mydashboard.html";-->
+<!--               location.href = x;-->
+
+
+	        };
+
+	        async function update_profile()  {
+	        var fname = document.getElementById("fname").value
+	        var lname = document.getElementById("lname").value
+	        var age = document.getElementById("age").value
+	        var gender = document.getElementById("gender").value
+	        var height = document.getElementById("height").value
+	        var weight = document.getElementById("weight").value
+	        var email = document.getElementById("email").value
+	        var password = document.getElementById("password").value
+	        var rpassword = document.getElementById("rpassword").value
+
+            eel.profile_updated()
+	        eel.update_user(fname, lname, age, gender, height, weight, email, password, rpassword)(setImage)
+
+
+
+	        };
+
+
+
+    </script>
+
+
+  </body>
+</html>

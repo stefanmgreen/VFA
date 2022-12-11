@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Evo Calendar</title>
+
+        <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.min.css">
+        <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.orange-coral.min.css">
+        <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.midnight-blue.min.css">
+        <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.royal-navy.min.css">
+<!--         <link rel="stylesheet" type="text/css" href="./demo/demo.css"> -->
+         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+
+
+        <script type="text/javascript" >
+
+
+           eel.my_calendar()
+
+
+
+
+        </script>
+
+    </head>
+    <body>
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/myschedule.html">Virtual<span>Fitness AI</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item cta-btn" >
+                    <a class="nav-link" onclick = bye() href="/member.html">Log Out</a>
+                </li>
+            </ul>
+            </div>
+
+            </div>
+        </nav>
+     </div>
+    </header>
+
+    <div>
+
+
+
+
+<!--         // this is where your calendar goes.. :) -->
+           <div class="--noshadow" id="demoEvoCalendar"></div>
+
+
+
+
+
+    </div>
+
+<!--         // evo-calendar.js, right after jQuery (required) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="./evo-calendar/js/evo-calendar.min.js"></script>
+
+<!--   -->
+<!--         <script src="./demo/demo2.js"></script> -->
+        <script type="text/javascript" >
+
+
+        // initialize your calendar, once the page's DOM is ready
+        $(document).ready(function() {
+            $('#demoEvoCalendar').evoCalendar({
+
+
+
+                theme: 'Royal Navy'
+<!--                var myEvents = eel.cal_events()-->
+<!--                calendarEvents: myEvents-->
+
+                // 'language': 'es'
+
+            })
+
+        });
+
+<!--        $('#demoEvoCalendar').evoCalendar({-->
+<!--            format: 'mm/dd/yyyy',-->
+<!--            titleFormat: 'MM yyyy',-->
+<!--            eventHeaderFormat: 'MM d, yyyy'-->
+<!--        });-->
+
+
+<!--        myEvents = [-->
+<!--          {-->
+<!--            id: "required-id-1",-->
+<!--            name: "New Year",-->
+<!--            date: "Wed Jan 01 2020 00:00:00 GMT-0800 (Pacific Standard Time)",-->
+<!--            type: "holiday",-->
+<!--            everyYear: true-->
+<!--          },-->
+<!--          {-->
+<!--            id: "required-id-2",-->
+<!--            name: "Valentine's Day",-->
+<!--            date: "Fri Feb 14 2020 00:00:00 GMT-0800 (Pacific Standard Time)",-->
+<!--            type: "holiday",-->
+<!--            everyYear: true,-->
+<!--            color: "#222"-->
+<!--          },-->
+<!--          {-->
+<!--            id: "required-id-3",-->
+<!--            name: "Custom Date",-->
+<!--            badge: "08/03 - 08/05",-->
+<!--            date: ["August/03/2020", "August/05/2020"],-->
+<!--            description: "Description here"-->
+<!--            type: "event",-->
+<!--          },-->
+<!--          // more events here-->
+<!--        ],-->
+
+<!--        $('#demoEvoCalendar').evoCalendar({-->
+<!--            calendarEvents: myEvents-->
+<!--        });-->
+
+
+
+        </script>
+
+    </body>
+</html>

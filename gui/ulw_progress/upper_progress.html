@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Fitness Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="ulw_progress/css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="../fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+      <script type="text/javascript" src="../eel.js"></script>
+      <script type="text/javascript" src="../main.js"></script>
+
+<!--      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.2.min.js"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.2.min.js"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.2.min.js"-->
+<!--        crossorigin="anonymous"></script>-->
+
+
+      <script type="text/javascript" >
+
+       eel.progress_upper()
+
+      </script>
+      <script id ="test"></script>
+
+
+
+
+
+  </head>
+  <body>
+
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/myprogress.html">Virtual<span>Fitness AI</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item cta-btn" >
+                    <a class="nav-link" onclick = bye() href="/member.html">Log Out</a>
+                </li>
+            </ul>
+            </div>
+
+            </div>
+        </nav>
+     </div>
+    </header>
+
+    <section class="section element-animate">
+
+      <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 text-center heading-wrap">
+              <h2>Upper Body Progress</h2>
+              <span class="back-text"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image tags for tables and graph plots will go here. -->
+
+<!--      <div class="owl-carousel centernonloop">-->
+<!--        <a href="/upper_lower_whole/beginner_ULW.html" class="item-class">-->
+<!--          <div class="text">-->
+<!--            <p class="class-price">5 min</p>-->
+<!--            <h2 class="class-heading">Beginner</h2>-->
+<!--          </div>-->
+<!--          <img src="../img/img_1_square.jpg" alt="" class="img-fluid">-->
+<!--        </a>-->
+        <table id="myTable" class="table table-borderless table-striped table-earning">
+
+
+
+                     <tbody id="test_met"></tbody>
+
+
+
+
+        </table>
+        <div>
+
+<!--          <script id ="test"></script>-->
+
+
+          <script id ="test2"></script>
+
+
+        </div>
+
+
+
+    </section>
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/magnific-popup-options.js"></script>
+
+
+    <script src="../js/main.js"></script>
+
+    <script type="text/javascript" >
+
+
+        // Responses
+
+	        async function bye()  {
+
+
+	        eel.goodbye()
+
+	        };
+
+
+
+
+	        eel.expose(upper_progress);
+	        function upper_progress(items)  {
+
+<!--    	        document.getElementById("test_met").innerHTML = Object.values(upper);-->
+    	        document.getElementById("test_met").innerHTML += items;
+
+	        };
+
+
+	        eel.expose(upper_w_d);
+	        function upper_w_d(items2, items3)  {
+
+
+	        document.getElementById("test").innerHTML += items2;
+	        document.getElementById("test2").innerHTML += items3;
+<!--    	    document.getElementById("test").insertAdjacentHTML("afterend", items2);-->
+<!--    	    document.getElementById("test2").insertAdjacentHTML("afterend", items3);-->
+
+
+
+	        };
+
+
+    </script>
+
+  </body>
+</html>
+

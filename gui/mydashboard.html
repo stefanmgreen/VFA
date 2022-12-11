@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Fitness Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" >
+
+      eel.welcome()
+
+    </script>
+
+  </head>
+  <body>
+
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/mydashboard.html">Virtual<span>Fitness AI</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample05">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item cta-btn" >
+                <a class="nav-link" onclick = bye() href="/member.html">Log Out</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+              <h1>Dashboard</h1>
+              <p class="mb-5">Welcome Back!</p>
+               <p><a href= "/myprofile.html" class="btn btn-white btn-outline-white">My Profile</a> <a href="/myprogress.html" class="btn btn-white btn-outline-white">My Progress</a> <a href="/myworkouts.html" class="btn btn-white btn-outline-white"> My Workouts </a> <a href="/myschedule.html" class="btn btn-white btn-outline-white"> My Schedule </a> </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-item" style="background-image: url('img/slider-2.jpg');">
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+              <h1>Dashboard</h1>
+              <p class="mb-5">Welcome Back! </p>
+              <p><a href= "/myprofile.html" class="btn btn-white btn-outline-white">My Profile</a> <a href="/myprogress.html" class="btn btn-white btn-outline-white">My Progress</a> <a href="/myworkouts.html" class="btn btn-white btn-outline-white"> My Workouts </a> <a href="/myschedule.html" class="btn btn-white btn-outline-white"> My Schedule </a> </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </section>
+    <!-- END slider -->
+
+
+    <div>
+        <div class="container">
+          <div class="row slider-text align-items-left justify-content-left">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+<!--               <p><button type="button" onclick="eel.assistant()" class="btn btn-white btn-outline-white" value = "Zion" onclick="eel.assistant()" </button></p>-->
+              <p><button class="btn btn-white btn-outline-white" onclick="assistant()">Zion</button></p>
+<!--              <input type="submit" class="btn btn-warning btn-block py-3" value="Create an account" onclick="signup()">-->
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!--href="#"-->
+
+    </section>
+
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    
+
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript" >
+
+
+        // Responses
+
+	        async function bye() {
+
+
+	        eel.goodbye()
+
+	        };
+
+
+            eel.expose(return_window)
+            function return_window() {
+
+                window.location.href;
+
+            }
+
+
+
+
+            function assistant(){
+
+                eel.assist();
+                window.location.href
+
+            }
+
+            eel.expose(my_dash)
+            function my_dash(){
+
+                window.location.assign("/mydashboard.html");
+            }
+
+
+            eel.expose(my_work)
+            function my_work(){
+
+                window.location.assign("/myworkouts.html");
+            }
+
+
+
+
+
+
+         </script>
+  </body>
+</html>
+

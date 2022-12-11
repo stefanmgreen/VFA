@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Fitness Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/animate.css">
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="../../../css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="../../../fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../../fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <script type="text/javascript" src="../../../eel.js"></script>
+    <script type="text/javascript" src="../../../main.js"></script>
+
+    <script type="text/javascript" >
+
+       eel.wk_two()
+
+    </script>
+
+  </head>
+  <body>
+
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../advanced_lower.html">Virtual<span>Fitness AI</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item cta-btn" >
+                    <a class="nav-link" onclick = bye() href="/member.html">Log Out</a>
+                </li>
+            </ul>
+            </div>
+
+            </div>
+        </nav>
+     </div>
+    </header>
+
+
+    <section class="section element-animate">
+      <div class="clearfix mb-5 pb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 text-center heading-wrap">
+              <h2>Workout two</h2>
+              <span class="back-text">Goblet Squat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="blog d-block d-lg-flex">
+              <div class="bg-image" style="background-image: url('../../../img/workouts/Goblet Squat.jpg');"></div>
+              <div class="text">
+                <h3>Goblet Squat</h3>
+                <p class="sched-time">
+                  <span><span class="fa fa-calendar"></span> Schedule</span> <br>
+                </p>
+
+                <p>
+
+                  STEPS:
+
+                  1. Stand upright with your legs together, arms at your sides.
+
+                  2. Bend your knees slightly, and jump into the air.
+
+                  3. As you jump, spread your legs to be about shoulder-width apart.
+                  Stretch your arms out and over your head.
+
+                  4. Jump back to starting position.
+
+                  5. Repeat.
+                </p>
+
+
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+            <div class="col-md-6">
+              <div class="blog d-block d-lg-flex">
+
+                <div class="bg-image" style="background-image: url('../../../img/workouts/Goblet Squat.gif');"></div>
+                <div class="text">
+
+                  <p><a href="#" onclick="startTimer()" class="btn btn-primary btn-sm">start timer</a></p>
+                  <p id ="countdown"></p>
+
+                </div>
+<!--                datatable to retrieve performance information. -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> <!-- .section -->
+
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-wrap overlap primary element-animate">
+              <h2 class="h2">WORKOUT STATS</h2>
+              <form action="#" method=" POST">
+                <div class="form-group">
+                  <input type="text" value ="Advanced" name= "exlvl" id= "exlvl" class="form-control" placeholder="Exercise Level">
+                </div>
+                <div class="form-group">
+                  <input type="text" value ="Lower Body" name= "body_pt" id= "body_pt" class="form-control" placeholder="Body Portion">
+                </div>
+                <div class="form-group">
+                  <input type="text" value ="Goblet Squat" name= "exname" id= "exname" class="form-control" placeholder="Exercise Name">
+                </div>
+                <div class="form-group">
+                  <input type="number" name= "weightused" id= "weightused" class="form-control" placeholder="Weight Used">
+                </div>
+                <div class="form-group">
+                  <input type="number" name= "setscomp" id= "setscomp" class="form-control" placeholder="Sets Completed">
+                </div>
+                <div class="form-group">
+                  <input type="text" name= "diff" id= "diff" class="form-control" placeholder="Difficulty (Easy/Moderate/Hard)">
+                </div>
+                <div class="form-group">
+                  <input type="date" value="YYYY-MM-DD" name= "date" id= "date" class="form-control" placeholder="Date">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-warning btn-block py-3" value="Workout Complete" onclick="workoutcomp()">
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.waypoints.min.js"></script>
+
+    <script src="../../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../js/magnific-popup-options.js"></script>
+
+
+    <script src="../../../js/main.js"></script>
+
+
+    <script type="text/javascript" >
+
+
+        // Responses
+
+
+	        async function bye()  {
+
+
+	        eel.goodbye()
+
+	        };
+
+	        async function workoutcomp()  {
+
+
+	        var exlvl = document.getElementById("exlvl").value
+	        var body_pt = document.getElementById("body_pt").value
+	        var exname = document.getElementById("exname").value
+	        var weightused = document.getElementById("weightused").value
+	        var setscomp = document.getElementById("setscomp").value
+	        var diff = document.getElementById("diff").value
+	        var date = document.getElementById("date").value
+
+
+
+	        eel.metrics(exlvl, body_pt, exname, weightused, setscomp, diff, date)(setImage)
+
+
+	        };
+
+
+	        eel.expose(new_href);
+	        function new_href(items)  {
+
+                    window.location.assign(items);
+
+	        };
+
+
+
+
+	        document.getElementById('countdown').innerHTML = "15" + ":" + "00";
+
+
+            function startTimer() {
+              var presentTime = document.getElementById('countdown').innerHTML;
+              var timeArray = presentTime.split(/[:]+/);
+              var m = timeArray[0];
+              var s = checkSecond((timeArray[1] - 1));
+              if(s==59){m=m-1}
+              if(m<0){
+                eel.t_complete()
+                return
+              }
+
+              document.getElementById('countdown').innerHTML = m + ":" + s;
+              console.log(m)
+              setTimeout(startTimer, 1000);
+
+            }
+
+            function checkSecond(sec) {
+              if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+              if (sec < 0) {sec = "59"};
+              return sec;
+            }
+
+
+    </script>
+
+
+  </body>
+</html>
